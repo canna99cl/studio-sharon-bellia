@@ -22,8 +22,12 @@ Entrando in `/admin/` la dottoressa trova tre sezioni:
 | Sezione | Cosa permette di cambiare |
 |---|---|
 | **Impostazioni sito** | Nome, qualifica, tagline, descrizione SEO, email, telefono, numero WhatsApp e messaggio, indirizzo, link Google Maps, **orari**, **social** (Facebook/Instagram), Albo, P.IVA. Questi dati si aggiornano **su tutte le pagine** in automatico. |
-| **Testi della Home** | Occhiello, titolo e sottotitolo della sezione iniziale (hero) e della presentazione "Chi sono". |
+| **Home** | Tutte le sezioni della homepage: hero, frase narrativa, "Chi sono" con le credenziali, i tre **ambiti** con i loro elenchi, citazione, **FAQ**, richiesta di contatto e recapiti. |
+| **Pagine** | Tutte le pagine interne — Competenze, Risorse, Dove trovarmi, Percorso e modalità, Psicologia clinica, Percorsi continuativi, Psicologia forense — con titoli, testi, **card**, **elenchi** e **FAQ** di ciascuna. |
 | **Articoli** | Crea, modifica e pubblica articoli del blog. Ogni articolo ha titolo, sommario, categoria, tempo di lettura, data, immagine di copertina (facoltativa) e contenuto. |
+
+> Recapiti, indirizzo e orari (che compaiono anche in "Dove trovarmi" e nella Home)
+> si modificano **una volta sola** da **Impostazioni sito** e si aggiornano ovunque.
 
 > Nel titolo della hero, per mettere una parola in *corsivo* si scrive `<em>parola</em>`.
 > Tutto il resto è testo normale.
