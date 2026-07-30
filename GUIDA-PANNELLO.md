@@ -5,8 +5,13 @@ pubblicare articoli, **senza toccare il codice**. Il pannello si chiama **Decap 
 e si raggiunge all'indirizzo:
 
 ```
-https://IL-TUO-SITO.netlify.app/admin/
+https://studio-sharon-bellia.netlify.app/admin/
 ```
+
+> **Il sito è già online e configurato.** Repository GitHub:
+> `canna99cl/studio-sharon-bellia` · Sito Netlify: `studio-sharon-bellia`.
+> La sezione 2 qui sotto descrive i passaggi già completati (per riferimento).
+> Alla dottoressa basta accettare l'invito email e accedere da `/admin/`.
 
 ---
 
