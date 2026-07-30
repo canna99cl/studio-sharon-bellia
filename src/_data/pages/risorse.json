@@ -1,0 +1,19 @@
+{
+  "subhero": {
+    "eyebrow": "Risorse gratuite",
+    "title": "Materiali utili da scaricare",
+    "lede": "Piccole guide pensate per orientarsi con più serenità. Lascia la tua email e ricevi il materiale nella tua casella."
+  },
+  "cards": [
+    { "icon": "documento", "title": "Cosa aspettarsi dal primo colloquio", "text": "Una guida breve per arrivare al primo incontro senza ansia, sapendo come si svolge.", "link_text": "Scarica (via email)", "link_href": "index.html#contactForm" },
+    { "icon": "scudo", "title": "Cosa fa una CTP", "text": "Per avvocati e famiglie: ruolo, tempi e utilità della consulenza tecnica di parte.", "link_text": "Scarica (via email)", "link_href": "index.html#contactForm" },
+    { "icon": "modulo", "title": "Modulistica e consenso informato", "text": "I moduli utili prima di iniziare un percorso, con il consenso informato al trattamento.", "link_text": "Scarica (via email)", "link_href": "index.html#contactForm" }
+  ],
+  "note": "Altri materiali in arrivo: podcast, schede pratiche ed ebook.",
+  "cta": {
+    "title": "Hai bisogno di un confronto?",
+    "text": "Scrivimi per un contatto preliminare informativo, in studio o online.",
+    "button_text": "Richiedi informazioni",
+    "button_href": "index.html#prenota"
+  }
+}

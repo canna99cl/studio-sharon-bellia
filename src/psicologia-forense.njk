@@ -4,17 +4,18 @@ title: "Psicologia forense e giuridica · Dott.ssa Sharon Maria Bellia — Calta
 description: "Psicologia forense a Caltanissetta: consulenza tecnica di parte (CTP), valutazione delle capacità genitoriali, ascolto del minore, perizie e relazioni psicologiche in ambito civile e penale."
 permalink: "/psicologia-forense.html"
 ---
+{% set p = pages["psicologia-forense"] %}
 <main class="internal-page" id="main">
     <section class="subhero" aria-labelledby="page-title">
       <div class="container">
         <nav class="breadcrumb reveal" aria-label="Percorso di navigazione">
           <a href="index.html">Home</a><span>/</span><a href="index.html#ambiti">Ambiti</a><span>/</span>Psicologia forense
         </nav>
-        <p class="eyebrow reveal">Ambito forense</p>
-        <h1 class="display subhero__title blur-in" id="page-title">Psicologia forense e giuridica</h1>
-        <p class="subhero__lede reveal">Consulenze, valutazioni e incarichi psicologici in ambito civile, penale e famiglia e minori, con attenzione al quesito, al ruolo professionale e alla documentazione tecnica.</p>
+        <p class="eyebrow reveal">{{ p.subhero.eyebrow }}</p>
+        <h1 class="display subhero__title blur-in" id="page-title">{{ p.subhero.title }}</h1>
+        <p class="subhero__lede reveal">{{ p.subhero.lede }}</p>
         <div class="reveal">
-          <a class="btn btn--primary" href="index.html#prenota">Richiedi una valutazione preliminare del quesito</a>
+          <a class="btn btn--primary" href="{{ p.subhero.button_href }}">{{ p.subhero.button_text }}</a>
         </div>
       </div>
     </section>
@@ -23,14 +24,14 @@ permalink: "/psicologia-forense.html"
     <section class="detail" id="destinatari-forense" aria-labelledby="destinatari-title">
       <div class="container">
         <div class="detail__head">
-          <p class="eyebrow reveal">Destinatari</p>
-          <h2 class="display detail__title blur-in" id="destinatari-title">A chi mi rivolgo</h2>
-          <p class="detail__text reveal">Il ruolo e le modalità dell'intervento cambiano in base a chi conferisce l'incarico e al contesto in cui nasce il quesito.</p>
+          <p class="eyebrow reveal">{{ p.destinatari.eyebrow }}</p>
+          <h2 class="display detail__title blur-in" id="destinatari-title">{{ p.destinatari.title }}</h2>
+          <p class="detail__text reveal">{{ p.destinatari.text }}</p>
         </div>
         <div class="situations">
-          <article class="situation reveal"><h3>Privati e famiglie</h3><p>Per comprendere la pertinenza di una richiesta psicologico-forense, di una consulenza di parte o di una valutazione extragiudiziale.</p></article>
-          <article class="situation reveal"><h3>Avvocati</h3><p>Per un confronto sul quesito, l'analisi della documentazione e il supporto tecnico-psicologico pertinente al procedimento.</p></article>
-          <article class="situation reveal"><h3>Autorità giudiziaria</h3><p>Per incarichi conferiti mediante nomina come CTU in ambito civile o come perito in ambito penale.</p></article>
+          {% for s in p.destinatari.items %}
+          <article class="situation reveal"><h3>{{ s.title }}</h3><p>{{ s.text }}</p></article>
+          {% endfor %}
         </div>
       </div>
     </section>
@@ -39,15 +40,14 @@ permalink: "/psicologia-forense.html"
     <section class="detail detail--alt" id="ruoli-forense" aria-labelledby="ruoli-title">
       <div class="container">
         <div class="detail__head">
-          <p class="eyebrow reveal">Ruoli e incarichi</p>
-          <h2 class="display detail__title blur-in" id="ruoli-title">Ruoli diversi, confini chiari</h2>
-          <p class="detail__text reveal">Ogni attività parte dalla definizione di chi conferisce l'incarico, del quesito e delle responsabilità connesse al ruolo.</p>
+          <p class="eyebrow reveal">{{ p.ruoli.eyebrow }}</p>
+          <h2 class="display detail__title blur-in" id="ruoli-title">{{ p.ruoli.title }}</h2>
+          <p class="detail__text reveal">{{ p.ruoli.text }}</p>
         </div>
         <div class="situations situations--four">
-          <article class="situation reveal"><h3>CTU in ambito civile</h3><p>L'incarico deriva dalla nomina dell'autorità giudiziaria. Il consulente opera come ausiliario del giudice nel rispetto del quesito e delle disposizioni ricevute.</p></article>
-          <article class="situation reveal"><h3>Perito in ambito penale</h3><p>L'incarico deriva dalla nomina dell'autorità giudiziaria e riguarda accertamenti psicologici pertinenti al quesito formulato.</p></article>
-          <article class="situation reveal"><h3>Consulenza Tecnica di Parte (CTP)</h3><p>L'incarico è conferito dalla parte, normalmente in raccordo con il legale, per offrire supporto tecnico e partecipare alle operazioni peritali quando previsto.</p></article>
-          <article class="situation reveal"><h3>Valutazioni e relazioni extragiudiziali</h3><p>Attività fondate su un mandato definito e accettate soltanto quando il quesito, la documentazione e le modalità risultano pertinenti e metodologicamente appropriati.</p></article>
+          {% for s in p.ruoli.items %}
+          <article class="situation reveal"><h3>{{ s.title }}</h3><p>{{ s.text }}</p></article>
+          {% endfor %}
         </div>
       </div>
     </section>
@@ -56,35 +56,19 @@ permalink: "/psicologia-forense.html"
     <section class="detail" id="ambiti-forensi" aria-labelledby="ambiti-forensi-title">
       <div class="container">
         <div class="detail__head">
-          <p class="eyebrow reveal">Ambiti di intervento</p>
-          <h2 class="display detail__title blur-in" id="ambiti-forensi-title">Civile, penale, famiglia e minori</h2>
-          <p class="detail__text reveal">Ogni ambito richiede un quesito definito, strumenti pertinenti e una lettura tecnica circoscritta alle competenze psicologiche.</p>
+          <p class="eyebrow reveal">{{ p.ambiti.eyebrow }}</p>
+          <h2 class="display detail__title blur-in" id="ambiti-forensi-title">{{ p.ambiti.title }}</h2>
+          <p class="detail__text reveal">{{ p.ambiti.text }}</p>
         </div>
         <div class="forensic-areas">
+          {% for area in p.ambiti.areas %}
           <article class="forensic-area reveal">
-            <h3>Ambito civile</h3>
+            <h3>{{ area.title }}</h3>
             <ul>
-              <li>Danno e conseguenze psicologiche pertinenti al quesito</li>
-              <li>Funzionamento psicologico nei procedimenti civili</li>
-              <li>Consulenza tecnica di parte e osservazioni nell'ambito di una CTU</li>
+              {% for v in area.list %}<li>{{ v }}</li>{% endfor %}
             </ul>
           </article>
-          <article class="forensic-area reveal">
-            <h3>Ambito penale</h3>
-            <ul>
-              <li>Attività peritale su nomina dell'autorità giudiziaria</li>
-              <li>Consulenza tecnica di parte e supporto tecnico al legale</li>
-              <li>Valutazioni psicologiche pertinenti al quesito e analisi documentale</li>
-            </ul>
-          </article>
-          <article class="forensic-area reveal">
-            <h3>Famiglia e minori</h3>
-            <ul>
-              <li>Capacità genitoriali, affidamento e dinamiche familiari</li>
-              <li>Ascolto e tutela del minore nei limiti del ruolo e del mandato</li>
-              <li>Consulenza tecnica nei procedimenti di separazione e affidamento</li>
-            </ul>
-          </article>
+          {% endfor %}
         </div>
       </div>
     </section>
@@ -93,17 +77,14 @@ permalink: "/psicologia-forense.html"
     <section class="detail detail--alt" id="confini-forensi" aria-labelledby="come-title">
       <div class="container detail__cols">
         <div>
-          <p class="eyebrow reveal">Confini professionali</p>
-          <h2 class="display detail__title blur-in" id="come-title">Il ruolo viene prima degli strumenti</h2>
-          <p class="detail__text reveal">Il lavoro forense risponde a un mandato e a un quesito: non coincide con un percorso clinico e richiede chiarezza del ruolo, metodo e limiti espliciti.</p>
+          <p class="eyebrow reveal">{{ p.confini.eyebrow }}</p>
+          <h2 class="display detail__title blur-in" id="come-title">{{ p.confini.title }}</h2>
+          <p class="detail__text reveal">{{ p.confini.text }}</p>
         </div>
         <ul class="method-list reveal">
-          <li><span class="n">01</span><span><b>Mandato e quesito</b><span class="d">Ogni attività è circoscritta alle domande tecniche e al ruolo conferito.</span></span></li>
-          <li><span class="n">02</span><span><b>Distinzione dal percorso clinico</b><span class="d">La valutazione forense non coincide con un percorso clinico o terapeutico.</span></span></li>
-          <li><span class="n">03</span><span><b>Strumenti pertinenti</b><span class="d">Colloqui, test e fonti documentali vengono scelti in relazione al quesito.</span></span></li>
-          <li><span class="n">04</span><span><b>Conclusioni motivate</b><span class="d">Le conclusioni restano limitate ai dati disponibili e alle competenze psicologiche.</span></span></li>
-          <li><span class="n">05</span><span><b>Riservatezza nel contesto giuridico</b><span class="d">Finalità, destinatari e limiti della riservatezza vengono chiariti prima dell'attività.</span></span></li>
-          <li><span class="n">06</span><span><b>Verifica preliminare</b><span class="d">Incompatibilità, limiti metodologici o mancanza di pertinenza possono determinare la non accettazione dell'incarico.</span></span></li>
+          {% for step in p.confini.method %}
+          <li><span class="n">{{ step.n }}</span><span><b>{{ step.title }}</b><span class="d">{{ step.desc }}</span></span></li>
+          {% endfor %}
         </ul>
       </div>
     </section>
@@ -112,18 +93,15 @@ permalink: "/psicologia-forense.html"
     <section class="detail" id="processo-forense" aria-labelledby="steps-title">
       <div class="container">
         <div class="detail__head">
-          <p class="eyebrow reveal">In pratica</p>
-          <h2 class="display detail__title blur-in" id="steps-title">Come si svolge un incarico</h2>
+          <p class="eyebrow reveal">{{ p.processo.eyebrow }}</p>
+          <h2 class="display detail__title blur-in" id="steps-title">{{ p.processo.title }}</h2>
         </div>
         <div class="steps steps--six">
-          <div class="step reveal"><div class="step__num">i</div><h3 class="step__title">Analisi preliminare</h3><p class="step__text">Esame iniziale della richiesta per verificarne pertinenza, competenza, disponibilità e possibili incompatibilità.</p></div>
-          <div class="step reveal"><div class="step__num">ii</div><h3 class="step__title">Mandato e quesito</h3><p class="step__text">Definizione del ruolo, di chi conferisce l'incarico e delle domande tecniche a cui il lavoro deve rispondere.</p></div>
-          <div class="step reveal"><div class="step__num">iii</div><h3 class="step__title">Documentazione e attività valutative</h3><p class="step__text">Analisi degli atti, colloqui e impiego degli strumenti appropriati rispetto al quesito.</p></div>
-          <div class="step reveal"><div class="step__num">iv</div><h3 class="step__title">Elaborazione tecnica</h3><p class="step__text">Integrazione critica dei dati raccolti secondo criteri metodologici espliciti e verificabili.</p></div>
-          <div class="step reveal"><div class="step__num">v</div><h3 class="step__title">Relazione e restituzione</h3><p class="step__text">Esposizione motivata delle conclusioni e restituzione coerente con il mandato ricevuto.</p></div>
-          <div class="step reveal"><div class="step__num">vi</div><h3 class="step__title">Attività processuali</h3><p class="step__text">Partecipazione alle operazioni peritali, alle udienze o ad altre attività quando prevista dall'incarico.</p></div>
+          {% for s in p.processo.steps %}
+          <div class="step reveal"><div class="step__num">{{ s.num }}</div><h3 class="step__title">{{ s.title }}</h3><p class="step__text">{{ s.text }}</p></div>
+          {% endfor %}
         </div>
-        <p class="section-note reveal">Per CTU e perito, modalità e tempi seguono la nomina e le disposizioni dell'autorità giudiziaria. Per CTP e attività extragiudiziali, il primo confronto serve anche a verificare se l'incarico possa essere accettato.</p>
+        <p class="section-note reveal">{{ p.processo.note }}</p>
       </div>
     </section>
 
@@ -139,18 +117,13 @@ permalink: "/psicologia-forense.html"
       <div class="container">
         <div class="faq__grid">
           <div class="faq__head">
-            <p class="eyebrow reveal">Domande frequenti</p>
-            <h2 class="display faq__title blur-in" id="faq-title">Sull'ambito forense</h2>
+            <p class="eyebrow reveal">{{ p.faq.eyebrow }}</p>
+            <h2 class="display faq__title blur-in" id="faq-title">{{ p.faq.title }}</h2>
           </div>
           <div class="faq__list reveal">
-            <details class="faq__item" name="faq-forense"><summary>Qual è la differenza tra CTU, perito e CTP? <span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__answer">Il CTU è nominato dall'autorità giudiziaria in ambito civile; il perito riceve la nomina in ambito penale. Il CTP è scelto dalla parte e opera, normalmente in raccordo con il legale, nel rispetto del mandato e del quesito.</div></details>
-            <details class="faq__item" name="faq-forense"><summary>Un privato può richiedere direttamente una CTU o una perizia? <span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__answer">No. CTU e perito ricevono l'incarico dall'autorità giudiziaria. Un privato può invece richiedere un confronto preliminare per valutare una consulenza tecnica di parte o un'attività extragiudiziale pertinente.</div></details>
-            <details class="faq__item" name="faq-forense"><summary>Quando può essere utile una consulenza tecnica di parte? <span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__answer">Può essere utile quando nel procedimento sono rilevanti aspetti psicologici e la parte necessita di assistenza tecnica nell'analisi del quesito, della documentazione e delle operazioni peritali.</div></details>
-            <details class="faq__item" name="faq-forense"><summary>Quali documenti servono per il primo confronto? <span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__answer">Dipende dalla richiesta. Possono essere utili il provvedimento di nomina, il quesito, gli atti pertinenti e le precedenti relazioni. Nel primo contatto viene indicato cosa è necessario condividere e con quali modalità.</div></details>
-            <details class="faq__item" name="faq-forense"><summary>Una valutazione forense è un percorso clinico? <span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__answer">No. La valutazione forense risponde a un mandato e a un quesito specifico; non ha finalità terapeutiche e richiede una chiara distinzione dei ruoli.</div></details>
-            <details class="faq__item" name="faq-forense"><summary>È possibile richiedere una relazione psicologica? <span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__answer">La richiesta viene valutata preliminarmente. Una relazione può essere redatta soltanto quando finalità, mandato, dati disponibili e attività svolte consentono un elaborato metodologicamente e deontologicamente appropriato.</div></details>
-            <details class="faq__item" name="faq-forense"><summary>L'attività può svolgersi interamente online? <span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__answer">Non sempre. Alcuni confronti e alcune attività documentali possono avvenire a distanza, mentre colloqui, valutazioni o operazioni peritali possono richiedere la presenza. La modalità viene definita in base al quesito e al contesto.</div></details>
-            <details class="faq__item" name="faq-forense"><summary>Come vengono definiti tempi e compenso? <span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__answer">Dipendono dal mandato, dalla complessità del quesito, dalla documentazione, dalle attività necessarie e dalle eventuali scadenze processuali. Vengono chiariti prima dell'accettazione dell'incarico o secondo le disposizioni dell'autorità giudiziaria.</div></details>
+            {% for f in p.faq.items %}
+            <details class="faq__item" name="faq"><summary>{{ f.q }} <span class="faq__icon" aria-hidden="true"></span></summary><div class="faq__answer">{{ f.a | safe }}</div></details>
+            {% endfor %}
           </div>
         </div>
       </div>
@@ -158,9 +131,9 @@ permalink: "/psicologia-forense.html"
 
     <section class="cta-band" aria-labelledby="cta-title">
       <div class="container">
-        <h2 id="cta-title" class="reveal">Vuoi sottoporre un quesito?</h2>
-        <p class="reveal">Il primo contatto serve a comprendere la richiesta, verificare la pertinenza dell'intervento e chiarire ruolo, documentazione e modalità dell'eventuale incarico.</p>
-        <div class="reveal"><a class="btn btn--light" href="index.html#prenota">Richiedi una valutazione preliminare del quesito</a></div>
+        <h2 id="cta-title" class="reveal">{{ p.cta.title }}</h2>
+        <p class="reveal">{{ p.cta.text }}</p>
+        <div class="reveal"><a class="btn btn--light" href="{{ p.cta.button_href }}">{{ p.cta.button_text }}</a></div>
       </div>
     </section>
   </main>

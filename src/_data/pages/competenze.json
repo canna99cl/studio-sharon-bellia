@@ -1,0 +1,60 @@
+{
+  "subhero": {
+    "eyebrow": "Formazione ed esperienza",
+    "title": "Competenza e rigore, documentati",
+    "lede": "Un percorso di formazione continuo e un'esperienza costruita nel tempo, in ambito clinico e giuridico. Di seguito i riferimenti principali."
+  },
+  "strip": {
+    "items": [
+      { "text": "Psicologa", "strong": true },
+      { "text": "Ordine degli Psicologi della Regione Siciliana", "strong": false },
+      { "text": "Sezione A · n. 12014", "strong": false },
+      { "text": "Area: Psicologia clinica", "strong": false }
+    ],
+    "link_text": "Verifica nell'Albo OPRS",
+    "link_url": "https://www.oprs.it/albo/"
+  },
+  "cards": [
+    {
+      "icon": "cappello",
+      "title": "Identità professionale",
+      "items": [
+        { "text": "Psicologa", "notes": [ { "text": "Attività professionale in area clinica e giuridico-forense" } ] },
+        { "text": "Iscrizione all'Albo degli Psicologi", "notes": [ { "text": "Ordine degli Psicologi della Regione Siciliana · Sezione A · n. 12014", "url": "https://www.oprs.it/albo/" } ] },
+        { "text": "Area di intervento dichiarata", "notes": [ { "text": "Psicologia clinica" } ] }
+      ]
+    },
+    {
+      "icon": "piu",
+      "title": "Formazione universitaria",
+      "items": [
+        { "text": "Laurea magistrale in Psicologia Clinica (LM-51)", "notes": [ { "text": "Università degli Studi di Urbino Carlo Bo", "url": "https://www.uniurb.it/", "suffix": " · 2018–2022" }, { "text": "Colloquio clinico, valutazione psicologica, psicodiagnostica e progettazione degli interventi." } ] },
+        { "text": "Laurea triennale in Scienze e Tecniche Psicologiche (L-24)", "notes": [ { "text": "Università degli Studi Niccolò Cusano", "url": "https://roma.unicusano.it/", "suffix": " · 2015–2018" }, { "text": "Prevenzione del disagio, promozione del benessere e processi psicosociali." } ] }
+      ]
+    },
+    {
+      "icon": "righe",
+      "title": "Specializzazione in psicoterapia",
+      "items": [
+        { "text": "Scuola di Specializzazione in Psicoterapia Cognitiva ALETEIA", "notes": [ { "text": "Percorso in corso dal 2025", "url": "https://www.aleteia.it/wb/" } ] },
+        { "text": "Orientamento", "notes": [ { "text": "Cognitivista, costruttivista e complesso" } ] },
+        { "text": "Approccio formativo", "notes": [ { "text": "Dinamico, multimodale, multicontestuale e integrato" } ] }
+      ]
+    },
+    {
+      "icon": "libro",
+      "title": "Psicologia giuridica e forense",
+      "items": [
+        { "text": "Master universitario di II livello in Criminologia – Psicologia Giuridica e Forense", "notes": [ { "text": "Master universitario di II livello · Università eCampus · titolo conseguito", "url": "https://www.uniecampus.it/master/master-primo-e-secondo-livello/criminologia-psicologia-giuridica-e-forense" } ] },
+        { "text": "Ambiti professionali", "notes": [ { "text": "Civile, penale, famiglia e minori" } ] },
+        { "text": "Ruoli e modalità", "notes": [ { "text": "Consulta la pagina Psicologia forense e giuridica", "url": "psicologia-forense.html" } ] }
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Vuoi conoscermi meglio?",
+    "text": "Scrivimi per un contatto preliminare informativo e per conoscere disponibilità e modalità, in studio o online.",
+    "button_text": "Richiedi informazioni",
+    "button_href": "index.html#prenota"
+  }
+}

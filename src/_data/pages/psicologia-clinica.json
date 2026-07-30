@@ -1,0 +1,60 @@
+{
+  "subhero": {
+    "eyebrow": "Ambito clinico",
+    "title": "Uno spazio per capire ciò che stai attraversando",
+    "lede": "Percorsi rivolti ad adulti, adolescenti, coppie, genitori e famiglie, per riconoscere ciò che pesa, dare un nome alle emozioni e costruire nuove possibilità. In presenza a Caltanissetta oppure online in tutta Italia, quando appropriato.",
+    "button_text": "Richiedi informazioni",
+    "button_href": "index.html#prenota"
+  },
+  "situazioni": {
+    "eyebrow": "Quando rivolgersi",
+    "title": "Situazioni in cui posso esserti utile",
+    "text": "Non serve toccare il fondo per chiedere aiuto. A volte basta sentire che qualcosa non va, o che si vorrebbe stare meglio. Ecco alcune delle richieste più frequenti.",
+    "items": [
+      { "title": "Ansia e attacchi di panico", "text": "Preoccupazione costante, tensione, episodi improvvisi che spaventano." },
+      { "title": "Depressione e momenti di crisi", "text": "Tristezza persistente, perdita di energia e interesse, senso di vuoto." },
+      { "title": "Autostima e valore personale", "text": "Autocritica, insicurezza, difficoltà a riconoscere ciò che si vale." },
+      { "title": "Relazioni e legami", "text": "Conflitti, dipendenza affettiva, solitudine, difficoltà a fidarsi." },
+      { "title": "Lutto e separazioni", "text": "Elaborare una perdita, la fine di una relazione, un cambiamento doloroso." },
+      { "title": "Stress e transizioni di vita", "text": "Lavoro, studio, genitorialità, scelte importanti che pesano." }
+    ]
+  },
+  "come_lavoro": {
+    "eyebrow": "Come lavoro",
+    "title": "Prima capire, poi lavorare insieme",
+    "text": "Nessuna diagnosi frettolosa e nessuna ricetta uguale per tutti. Il primo passo è creare uno spazio sicuro dove poter parlare liberamente. Da lì costruiamo un lavoro su misura, con obiettivi chiari e condivisi, rispettando i tuoi tempi.",
+    "method": [
+      { "n": "01", "title": "Ascolto senza giudizio", "desc": "Uno spazio riservato dove ciò che porti viene accolto e compreso." },
+      { "n": "02", "title": "Obiettivi condivisi", "desc": "Definiamo insieme cosa vuoi cambiare e cosa conta davvero per te." },
+      { "n": "03", "title": "Il tuo ritmo", "desc": "Il percorso procede alla velocità giusta per te, senza forzature." },
+      { "n": "04", "title": "Riservatezza assoluta", "desc": "Tutto è coperto dal segreto professionale previsto dalla legge." }
+    ]
+  },
+  "pratica": {
+    "eyebrow": "In pratica",
+    "title": "Come si comincia",
+    "steps": [
+      { "num": "i", "title": "Primo contatto", "text": "Mi scrivi dal form o mi chiami: mi racconti in breve cosa ti porta qui." },
+      { "num": "ii", "title": "Primo colloquio", "text": "Ci conosciamo, chiarisco i tuoi dubbi e valutiamo insieme la richiesta." },
+      { "num": "iii", "title": "Obiettivi", "text": "Definiamo insieme il senso e la direzione del percorso." },
+      { "num": "iv", "title": "Il percorso", "text": "Procediamo con incontri regolari, in studio o online." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Domande frequenti",
+    "title": "Sul percorso clinico",
+    "items": [
+      { "q": "Quanto dura un percorso?", "a": "Dipende dalla richiesta: alcuni percorsi di sostegno durano poche settimane, altri richiedono più tempo. Ne parliamo fin dal primo colloquio, senza vincoli predefiniti." },
+      { "q": "Quanto dura un incontro e con quale frequenza?", "a": "Un incontro dura circa 50 minuti. La frequenza viene concordata in base alla richiesta, agli obiettivi e al tipo di percorso. Consulta le <a class=\"text-link\" href=\"percorso-modalita.html#incontri\">modalità degli incontri</a>." },
+      { "q": "Come funziona per gli adolescenti?", "a": "Prima dell'avvio vengono chiariti obiettivi, modalità, riservatezza e rapporti con la famiglia. Per la presa in carico di una persona minorenne è richiesto il consenso di entrambi i genitori, salvo diversi provvedimenti dell'autorità competente. Maggiori informazioni sono disponibili nella sezione dedicata agli <a class=\"text-link\" href=\"percorso-modalita.html#adolescenti\">adolescenti</a>." },
+      { "q": "Meglio in presenza o online?", "a": "La modalità viene valutata in base alla richiesta, agli obiettivi e alle condizioni concrete della persona. Quando appropriato, gli incontri possono svolgersi in studio, online o alternando le due modalità." },
+      { "q": "Quello che dico resta riservato?", "a": "Sì. Tutto è coperto dal segreto professionale del Codice Deontologico degli Psicologi. Nulla viene condiviso senza il tuo consenso, salvo i casi previsti dalla legge." }
+    ]
+  },
+  "cta": {
+    "title": "Il primo passo può essere oggi",
+    "text": "Scrivimi per un primo colloquio conoscitivo. Rispondo personalmente entro 48 ore.",
+    "button_text": "Richiedi informazioni",
+    "button_href": "index.html#prenota"
+  }
+}

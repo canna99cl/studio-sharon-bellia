@@ -4,15 +4,16 @@ title: "Percorso e modalità · Dott.ssa Sharon Maria Bellia — Caltanissetta"
 description: "Dal primo contatto alla definizione del percorso: destinatari, durata, frequenza, incontri in studio e online e informazioni organizzative."
 permalink: "/percorso-modalita.html"
 ---
+{% set p = pages["percorso-modalita"] %}
 <main class="internal-page" id="main">
     <section class="subhero" aria-labelledby="page-title">
       <div class="container">
         <nav class="breadcrumb reveal" aria-label="Percorso di navigazione">
           <a href="index.html">Home</a><span>/</span>Percorso e modalità
         </nav>
-        <p class="eyebrow reveal">Come iniziare</p>
-        <h1 class="display subhero__title blur-in" id="page-title">Percorso e modalità</h1>
-        <p class="subhero__lede reveal">Dal primo messaggio alla costruzione del percorso, con tutte le informazioni pratiche per capire come si svolgono gli incontri.</p>
+        <p class="eyebrow reveal">{{ p.subhero.eyebrow }}</p>
+        <h1 class="display subhero__title blur-in" id="page-title">{{ p.subhero.title }}</h1>
+        <p class="subhero__lede reveal">{{ p.subhero.lede }}</p>
       </div>
     </section>
 
@@ -32,30 +33,17 @@ permalink: "/percorso-modalita.html"
     <section class="journey" id="percorso" aria-labelledby="journey-title">
       <div class="container">
         <div class="percorso__head reveal">
-          <p class="eyebrow">Dal contatto alla prosecuzione</p>
-          <h2 class="display percorso__title" id="journey-title">Un percorso costruito insieme</h2>
+          <p class="eyebrow">{{ p.journey.eyebrow }}</p>
+          <h2 class="display percorso__title" id="journey-title">{{ p.journey.title }}</h2>
         </div>
         <div class="steps">
+          {% for s in p.journey.steps %}
           <div class="step reveal">
-            <div class="step__num">i</div>
-            <h3 class="step__title">La richiesta</h3>
-            <p class="step__text">Invii un messaggio dal modulo o tramite WhatsApp, raccontando in poche righe il motivo del contatto.</p>
+            <div class="step__num">{{ s.num }}</div>
+            <h3 class="step__title">{{ s.title }}</h3>
+            <p class="step__text">{{ s.text }}</p>
           </div>
-          <div class="step reveal">
-            <div class="step__num">ii</div>
-            <h3 class="step__title">Il primo incontro</h3>
-            <p class="step__text">Concordiamo giorno, orario e modalità. Il primo colloquio serve a comprendere la richiesta e chiarire le aspettative.</p>
-          </div>
-          <div class="step reveal">
-            <div class="step__num">iii</div>
-            <h3 class="step__title">Obiettivi condivisi</h3>
-            <p class="step__text">Valutiamo il tipo di intervento più appropriato e definiamo insieme obiettivi, frequenza e condizioni del percorso.</p>
-          </div>
-          <div class="step reveal">
-            <div class="step__num">iv</div>
-            <h3 class="step__title">Prosecuzione e verifica</h3>
-            <p class="step__text">Se decidiamo di proseguire, l'andamento e gli obiettivi vengono riletti periodicamente e possono essere aggiornati nel tempo.</p>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </section>
@@ -63,50 +51,22 @@ permalink: "/percorso-modalita.html"
     <section class="operations" aria-label="Informazioni operative">
       <div class="container">
         <div class="operations__grid">
-          <article class="operation-card reveal" id="destinatari">
-            <h2 class="display">A chi sono rivolti</h2>
-            <p>I percorsi sono rivolti ad adulti, adolescenti, coppie, genitori e famiglie. La richiesta viene approfondita nel primo contatto per valutare insieme il tipo di intervento più appropriato.</p>
+          {% for op in p.operations %}
+          <article class="operation-card{% if op.wide %} operation-card--wide{% endif %} reveal" id="{{ op.id }}">
+            <h2 class="display">{{ op.title }}</h2>
+            <p>{{ op.text }}</p>
           </article>
-
-          <article class="operation-card reveal" id="incontri">
-            <h2 class="display">Durata e frequenza</h2>
-            <p>Ogni incontro dura circa 50 minuti. La frequenza non è uguale per tutti: viene concordata in base alla richiesta, agli obiettivi e alle caratteristiche del percorso.</p>
-          </article>
-
-          <article class="operation-card reveal" id="online">
-            <h2 class="display">In studio oppure online</h2>
-            <p>Gli incontri possono svolgersi in studio a Caltanissetta oppure online in tutta Italia. L'appropriatezza della modalità a distanza viene valutata caso per caso.</p>
-          </article>
-
-          <article class="operation-card reveal" id="contatto">
-            <h2 class="display">Risposta entro 24 ore</h2>
-            <p>Puoi inviare una richiesta tramite il modulo del sito o WhatsApp. Le nuove richieste ricevono normalmente una risposta entro 24 ore, per chiarire disponibilità e possibile modalità del primo incontro.</p>
-          </article>
-
-          <article class="operation-card reveal" id="spostamenti">
-            <h2 class="display">Spostamenti e cancellazioni</h2>
-            <p>Per annullare o spostare un incontro è richiesto un preavviso di almeno 3 giorni. Le condizioni economiche e organizzative vengono chiarite prima dell'avvio del percorso.</p>
-          </article>
-
-          <article class="operation-card reveal" id="adolescenti">
-            <h2 class="display">Percorsi con adolescenti</h2>
-            <p>Prima dell'avvio vengono chiariti obiettivi, modalità, riservatezza e rapporti con la famiglia. Per la presa in carico di una persona minorenne è richiesto il consenso di entrambi i genitori, salvo diversi provvedimenti dell'autorità competente.</p>
-          </article>
-
-          <article class="operation-card operation-card--wide reveal" id="urgenze">
-            <h2 class="display">Le emergenze richiedono canali dedicati</h2>
-            <p>Lo studio non è un servizio di emergenza e il modulo, l'email e WhatsApp non sono monitorati in modo continuativo. In presenza di un pericolo immediato è necessario contattare il 112 o rivolgersi al Pronto Soccorso.</p>
-          </article>
+          {% endfor %}
         </div>
-        <p class="operation-note reveal">Queste informazioni hanno carattere generale. Gli aspetti specifici del percorso, compresi compenso, frequenza, consenso informato e limiti della riservatezza, vengono concordati e documentati prima dell'avvio.</p>
+        <p class="operation-note reveal">{{ p.operation_note }}</p>
       </div>
     </section>
 
     <section class="cta-band" aria-labelledby="cta-title">
       <div class="container">
-        <h2 id="cta-title" class="reveal">Vuoi chiedere un'informazione?</h2>
-        <p class="reveal">Puoi presentare brevemente la tua richiesta e verificare disponibilità e modalità del primo incontro.</p>
-        <div class="reveal"><a class="btn btn--light" href="index.html#prenota">Richiedi un primo contatto</a></div>
+        <h2 id="cta-title" class="reveal">{{ p.cta.title }}</h2>
+        <p class="reveal">{{ p.cta.text }}</p>
+        <div class="reveal"><a class="btn btn--light" href="{{ p.cta.button_href }}">{{ p.cta.button_text }}</a></div>
       </div>
     </section>
   </main>

@@ -1,0 +1,17 @@
+{
+  "subhero": {
+    "eyebrow": "Vieni a trovarmi",
+    "title": "Dove trovarmi",
+    "lede": "Lo studio si trova a Caltanissetta, in un ambiente riservato e accogliente. Ricevo su appuntamento, in presenza oppure online."
+  },
+  "map_cta": "Apri su Google Maps · indicazioni stradali",
+  "recapiti_eyebrow": "Recapiti",
+  "hours_title": "Orari di ricevimento",
+  "note": "Ricevo su appuntamento, in studio o online. Clicca la mappa per aprire le indicazioni stradali su Google Maps.",
+  "cta": {
+    "title": "Preferisci il primo incontro online?",
+    "text": "È possibile richiedere un contatto preliminare informativo anche in videochiamata.",
+    "button_text": "Richiedi informazioni",
+    "button_href": "index.html#prenota"
+  }
+}

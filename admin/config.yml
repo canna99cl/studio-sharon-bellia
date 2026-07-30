@@ -189,6 +189,468 @@ collections:
               - { label: "Testo consenso privacy", name: "privacy_label", widget: "text", hint: "Puoi inserire link con <a href=\"...\">testo</a>" }
 
   # ─────────────────────────────────────────────
+  # PAGINE (tutte le sezioni delle pagine interne)
+  # ─────────────────────────────────────────────
+  - name: "pagine"
+    label: "Pagine"
+    delete: false
+    editor:
+      preview: false
+    files:
+      # ---------- COMPETENZE ----------
+      - name: "competenze"
+        label: "Competenze"
+        file: "src/_data/pages/competenze.json"
+        fields:
+          - label: "Intestazione"
+            name: "subhero"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Occhiello", name: "eyebrow", widget: "string" }
+              - { label: "Titolo", name: "title", widget: "text" }
+              - { label: "Sottotitolo", name: "lede", widget: "text" }
+          - label: "Fascia credenziali"
+            name: "strip"
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "Voci"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.text}}"
+                fields:
+                  - { label: "Testo", name: "text", widget: "string" }
+                  - { label: "In grassetto", name: "strong", widget: "boolean", default: false }
+              - { label: "Link · testo", name: "link_text", widget: "string" }
+              - { label: "Link · URL", name: "link_url", widget: "string" }
+          - label: "Riquadri formazione"
+            name: "cards"
+            widget: "list"
+            label_singular: "Riquadro"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icona", name: "icon", widget: "select", options: ["cappello", "piu", "righe", "libro"] }
+              - { label: "Titolo", name: "title", widget: "string" }
+              - label: "Voci"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.text}}"
+                fields:
+                  - { label: "Testo", name: "text", widget: "string" }
+                  - label: "Note (righe piccole)"
+                    name: "notes"
+                    widget: "list"
+                    summary: "{{fields.text}}"
+                    fields:
+                      - { label: "Testo", name: "text", widget: "string" }
+                      - { label: "Link (URL)", name: "url", widget: "string", required: false }
+                      - { label: "Testo dopo il link", name: "suffix", widget: "string", required: false }
+          - label: "Fascia finale (CTA)"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Titolo", name: "title", widget: "string" }
+              - { label: "Testo", name: "text", widget: "text" }
+              - { label: "Bottone · testo", name: "button_text", widget: "string" }
+              - { label: "Bottone · link", name: "button_href", widget: "string" }
+
+      # ---------- RISORSE ----------
+      - name: "risorse"
+        label: "Risorse"
+        file: "src/_data/pages/risorse.json"
+        fields:
+          - label: "Intestazione"
+            name: "subhero"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Occhiello", name: "eyebrow", widget: "string" }
+              - { label: "Titolo", name: "title", widget: "text" }
+              - { label: "Sottotitolo", name: "lede", widget: "text" }
+          - label: "Materiali (card)"
+            name: "cards"
+            widget: "list"
+            label_singular: "Materiale"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icona", name: "icon", widget: "select", options: ["documento", "scudo", "modulo", "cuore", "bussola"] }
+              - { label: "Titolo", name: "title", widget: "string" }
+              - { label: "Testo", name: "text", widget: "text" }
+              - { label: "Link · testo", name: "link_text", widget: "string" }
+              - { label: "Link · pagina", name: "link_href", widget: "string" }
+          - { label: "Nota finale", name: "note", widget: "text" }
+          - label: "Fascia finale (CTA)"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Titolo", name: "title", widget: "string" }
+              - { label: "Testo", name: "text", widget: "text" }
+              - { label: "Bottone · testo", name: "button_text", widget: "string" }
+              - { label: "Bottone · link", name: "button_href", widget: "string" }
+
+      # ---------- DOVE TROVARMI ----------
+      - name: "dove-trovarmi"
+        label: "Dove trovarmi"
+        file: "src/_data/pages/dove-trovarmi.json"
+        description: "Indirizzo, orari, mappa e recapiti si modificano da «Impostazioni sito»."
+        fields:
+          - label: "Intestazione"
+            name: "subhero"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Occhiello", name: "eyebrow", widget: "string" }
+              - { label: "Titolo", name: "title", widget: "text" }
+              - { label: "Sottotitolo", name: "lede", widget: "text" }
+          - { label: "Testo link mappa", name: "map_cta", widget: "string" }
+          - { label: "Occhiello recapiti", name: "recapiti_eyebrow", widget: "string" }
+          - { label: "Titolo orari", name: "hours_title", widget: "string" }
+          - { label: "Nota", name: "note", widget: "text" }
+          - label: "Fascia finale (CTA)"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Titolo", name: "title", widget: "string" }
+              - { label: "Testo", name: "text", widget: "text" }
+              - { label: "Bottone · testo", name: "button_text", widget: "string" }
+              - { label: "Bottone · link", name: "button_href", widget: "string" }
+
+      # ---------- PERCORSO E MODALITÀ ----------
+      - name: "percorso-modalita"
+        label: "Percorso e modalità"
+        file: "src/_data/pages/percorso-modalita.json"
+        fields:
+          - label: "Intestazione"
+            name: "subhero"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Occhiello", name: "eyebrow", widget: "string" }
+              - { label: "Titolo", name: "title", widget: "text" }
+              - { label: "Sottotitolo", name: "lede", widget: "text" }
+          - label: "Percorso (passaggi)"
+            name: "journey"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Occhiello", name: "eyebrow", widget: "string" }
+              - { label: "Titolo", name: "title", widget: "text" }
+              - label: "Passaggi"
+                name: "steps"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Numero", name: "num", widget: "string" }
+                  - { label: "Titolo", name: "title", widget: "string" }
+                  - { label: "Testo", name: "text", widget: "text" }
+          - label: "Riquadri informativi"
+            name: "operations"
+            widget: "list"
+            label_singular: "Riquadro"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Ancora (id)", name: "id", widget: "string" }
+              - { label: "Titolo", name: "title", widget: "string" }
+              - { label: "Testo", name: "text", widget: "text" }
+              - { label: "Largo (doppia colonna)", name: "wide", widget: "boolean", default: false }
+          - { label: "Nota finale", name: "operation_note", widget: "text" }
+          - label: "Fascia finale (CTA)"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Titolo", name: "title", widget: "string" }
+              - { label: "Testo", name: "text", widget: "text" }
+              - { label: "Bottone · testo", name: "button_text", widget: "string" }
+              - { label: "Bottone · link", name: "button_href", widget: "string" }
+
+      # ---------- PSICOLOGIA CLINICA ----------
+      - name: "psicologia-clinica"
+        label: "Psicologia clinica"
+        file: "src/_data/pages/psicologia-clinica.json"
+        fields:
+          - label: "Intestazione"
+            name: "subhero"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Occhiello", name: "eyebrow", widget: "string" }
+              - { label: "Titolo", name: "title", widget: "text" }
+              - { label: "Sottotitolo", name: "lede", widget: "text" }
+              - { label: "Bottone · testo", name: "button_text", widget: "string" }
+              - { label: "Bottone · link", name: "button_href", widget: "string" }
+          - label: "Quando rivolgersi"
+            name: "situazioni"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Occhiello", name: "eyebrow", widget: "string" }
+              - { label: "Titolo", name: "title", widget: "text" }
+              - { label: "Testo", name: "text", widget: "text" }
+              - label: "Situazioni"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Titolo", name: "title", widget: "string" }
+                  - { label: "Testo", name: "text", widget: "text" }
+          - label: "Come lavoro"
+            name: "come_lavoro"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Occhiello", name: "eyebrow", widget: "string" }
+              - { label: "Titolo", name: "title", widget: "text" }
+              - { label: "Testo", name: "text", widget: "text" }
+              - label: "Metodo"
+                name: "method"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Numero", name: "n", widget: "string" }
+                  - { label: "Titolo", name: "title", widget: "string" }
+                  - { label: "Descrizione", name: "desc", widget: "text" }
+          - label: "In pratica"
+            name: "pratica"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Occhiello", name: "eyebrow", widget: "string" }
+              - { label: "Titolo", name: "title", widget: "text" }
+              - label: "Passaggi"
+                name: "steps"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Numero", name: "num", widget: "string" }
+                  - { label: "Titolo", name: "title", widget: "string" }
+                  - { label: "Testo", name: "text", widget: "text" }
+          - label: "Domande frequenti"
+            name: "faq"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Occhiello", name: "eyebrow", widget: "string" }
+              - { label: "Titolo", name: "title", widget: "text" }
+              - label: "Domande"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.q}}"
+                fields:
+                  - { label: "Domanda", name: "q", widget: "string" }
+                  - { label: "Risposta", name: "a", widget: "text", hint: "Puoi inserire link con <a href=\"...\">testo</a>" }
+          - label: "Fascia finale (CTA)"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Titolo", name: "title", widget: "string" }
+              - { label: "Testo", name: "text", widget: "text" }
+              - { label: "Bottone · testo", name: "button_text", widget: "string" }
+              - { label: "Bottone · link", name: "button_href", widget: "string" }
+
+      # ---------- PSICOTERAPIA ----------
+      - name: "psicoterapia"
+        label: "Percorsi continuativi"
+        file: "src/_data/pages/psicoterapia.json"
+        fields:
+          - label: "Intestazione"
+            name: "subhero"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Occhiello", name: "eyebrow", widget: "string" }
+              - { label: "Titolo", name: "title", widget: "text" }
+              - { label: "Sottotitolo", name: "lede", widget: "text" }
+              - { label: "Bottone · testo", name: "button_text", widget: "string" }
+              - { label: "Bottone · link", name: "button_href", widget: "string" }
+          - label: "Nota trasparenza"
+            name: "nota"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Occhiello", name: "eyebrow", widget: "string" }
+              - { label: "Titolo", name: "title", widget: "text" }
+              - { label: "Testo", name: "text", widget: "text" }
+          - label: "Quando può servire"
+            name: "situazioni"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Occhiello", name: "eyebrow", widget: "string" }
+              - { label: "Titolo", name: "title", widget: "text" }
+              - { label: "Testo", name: "text", widget: "text" }
+              - label: "Situazioni"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Titolo", name: "title", widget: "string" }
+                  - { label: "Testo", name: "text", widget: "text" }
+          - label: "Come lavoro"
+            name: "come_lavoro"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Occhiello", name: "eyebrow", widget: "string" }
+              - { label: "Titolo", name: "title", widget: "text" }
+              - { label: "Testo", name: "text", widget: "text" }
+              - label: "Metodo"
+                name: "method"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Numero", name: "n", widget: "string" }
+                  - { label: "Titolo", name: "title", widget: "string" }
+                  - { label: "Descrizione", name: "desc", widget: "text" }
+          - label: "Domande frequenti"
+            name: "faq"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Occhiello", name: "eyebrow", widget: "string" }
+              - { label: "Titolo", name: "title", widget: "text" }
+              - label: "Domande"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.q}}"
+                fields:
+                  - { label: "Domanda", name: "q", widget: "string" }
+                  - { label: "Risposta", name: "a", widget: "text", hint: "Puoi inserire link con <a href=\"...\">testo</a>" }
+          - label: "Fascia finale (CTA)"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Titolo", name: "title", widget: "string" }
+              - { label: "Testo", name: "text", widget: "text" }
+              - { label: "Bottone · testo", name: "button_text", widget: "string" }
+              - { label: "Bottone · link", name: "button_href", widget: "string" }
+
+      # ---------- PSICOLOGIA FORENSE ----------
+      - name: "psicologia-forense"
+        label: "Psicologia forense"
+        file: "src/_data/pages/psicologia-forense.json"
+        fields:
+          - label: "Intestazione"
+            name: "subhero"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Occhiello", name: "eyebrow", widget: "string" }
+              - { label: "Titolo", name: "title", widget: "text" }
+              - { label: "Sottotitolo", name: "lede", widget: "text" }
+              - { label: "Bottone · testo", name: "button_text", widget: "string" }
+              - { label: "Bottone · link", name: "button_href", widget: "string" }
+          - label: "Destinatari"
+            name: "destinatari"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Occhiello", name: "eyebrow", widget: "string" }
+              - { label: "Titolo", name: "title", widget: "text" }
+              - { label: "Testo", name: "text", widget: "text" }
+              - label: "Voci"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Titolo", name: "title", widget: "string" }
+                  - { label: "Testo", name: "text", widget: "text" }
+          - label: "Ruoli e incarichi"
+            name: "ruoli"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Occhiello", name: "eyebrow", widget: "string" }
+              - { label: "Titolo", name: "title", widget: "text" }
+              - { label: "Testo", name: "text", widget: "text" }
+              - label: "Voci"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Titolo", name: "title", widget: "string" }
+                  - { label: "Testo", name: "text", widget: "text" }
+          - label: "Ambiti di intervento"
+            name: "ambiti"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Occhiello", name: "eyebrow", widget: "string" }
+              - { label: "Titolo", name: "title", widget: "text" }
+              - { label: "Testo", name: "text", widget: "text" }
+              - label: "Aree"
+                name: "areas"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Titolo", name: "title", widget: "string" }
+                  - label: "Elenco"
+                    name: "list"
+                    widget: "list"
+                    field: { label: "Voce", name: "voce", widget: "string" }
+          - label: "Confini professionali"
+            name: "confini"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Occhiello", name: "eyebrow", widget: "string" }
+              - { label: "Titolo", name: "title", widget: "text" }
+              - { label: "Testo", name: "text", widget: "text" }
+              - label: "Punti"
+                name: "method"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Numero", name: "n", widget: "string" }
+                  - { label: "Titolo", name: "title", widget: "string" }
+                  - { label: "Descrizione", name: "desc", widget: "text" }
+          - label: "Come si svolge un incarico"
+            name: "processo"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Occhiello", name: "eyebrow", widget: "string" }
+              - { label: "Titolo", name: "title", widget: "text" }
+              - label: "Passaggi"
+                name: "steps"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Numero", name: "num", widget: "string" }
+                  - { label: "Titolo", name: "title", widget: "string" }
+                  - { label: "Testo", name: "text", widget: "text" }
+              - { label: "Nota", name: "note", widget: "text" }
+          - label: "Domande frequenti"
+            name: "faq"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Occhiello", name: "eyebrow", widget: "string" }
+              - { label: "Titolo", name: "title", widget: "text" }
+              - label: "Domande"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.q}}"
+                fields:
+                  - { label: "Domanda", name: "q", widget: "string" }
+                  - { label: "Risposta", name: "a", widget: "text", hint: "Puoi inserire link con <a href=\"...\">testo</a>" }
+          - label: "Fascia finale (CTA)"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Titolo", name: "title", widget: "string" }
+              - { label: "Testo", name: "text", widget: "text" }
+              - { label: "Bottone · testo", name: "button_text", widget: "string" }
+              - { label: "Bottone · link", name: "button_href", widget: "string" }
+
+  # ─────────────────────────────────────────────
   # ARTICOLI (blog)
   # ─────────────────────────────────────────────
   - name: "articoli"

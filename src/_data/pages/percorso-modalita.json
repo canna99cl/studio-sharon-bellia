@@ -1,0 +1,33 @@
+{
+  "subhero": {
+    "eyebrow": "Come iniziare",
+    "title": "Percorso e modalità",
+    "lede": "Dal primo messaggio alla costruzione del percorso, con tutte le informazioni pratiche per capire come si svolgono gli incontri."
+  },
+  "journey": {
+    "eyebrow": "Dal contatto alla prosecuzione",
+    "title": "Un percorso costruito insieme",
+    "steps": [
+      { "num": "i", "title": "La richiesta", "text": "Invii un messaggio dal modulo o tramite WhatsApp, raccontando in poche righe il motivo del contatto." },
+      { "num": "ii", "title": "Il primo incontro", "text": "Concordiamo giorno, orario e modalità. Il primo colloquio serve a comprendere la richiesta e chiarire le aspettative." },
+      { "num": "iii", "title": "Obiettivi condivisi", "text": "Valutiamo il tipo di intervento più appropriato e definiamo insieme obiettivi, frequenza e condizioni del percorso." },
+      { "num": "iv", "title": "Prosecuzione e verifica", "text": "Se decidiamo di proseguire, l'andamento e gli obiettivi vengono riletti periodicamente e possono essere aggiornati nel tempo." }
+    ]
+  },
+  "operations": [
+    { "id": "destinatari", "title": "A chi sono rivolti", "text": "I percorsi sono rivolti ad adulti, adolescenti, coppie, genitori e famiglie. La richiesta viene approfondita nel primo contatto per valutare insieme il tipo di intervento più appropriato.", "wide": false },
+    { "id": "incontri", "title": "Durata e frequenza", "text": "Ogni incontro dura circa 50 minuti. La frequenza non è uguale per tutti: viene concordata in base alla richiesta, agli obiettivi e alle caratteristiche del percorso.", "wide": false },
+    { "id": "online", "title": "In studio oppure online", "text": "Gli incontri possono svolgersi in studio a Caltanissetta oppure online in tutta Italia. L'appropriatezza della modalità a distanza viene valutata caso per caso.", "wide": false },
+    { "id": "contatto", "title": "Risposta entro 24 ore", "text": "Puoi inviare una richiesta tramite il modulo del sito o WhatsApp. Le nuove richieste ricevono normalmente una risposta entro 24 ore, per chiarire disponibilità e possibile modalità del primo incontro.", "wide": false },
+    { "id": "spostamenti", "title": "Spostamenti e cancellazioni", "text": "Per annullare o spostare un incontro è richiesto un preavviso di almeno 3 giorni. Le condizioni economiche e organizzative vengono chiarite prima dell'avvio del percorso.", "wide": false },
+    { "id": "adolescenti", "title": "Percorsi con adolescenti", "text": "Prima dell'avvio vengono chiariti obiettivi, modalità, riservatezza e rapporti con la famiglia. Per la presa in carico di una persona minorenne è richiesto il consenso di entrambi i genitori, salvo diversi provvedimenti dell'autorità competente.", "wide": false },
+    { "id": "urgenze", "title": "Le emergenze richiedono canali dedicati", "text": "Lo studio non è un servizio di emergenza e il modulo, l'email e WhatsApp non sono monitorati in modo continuativo. In presenza di un pericolo immediato è necessario contattare il 112 o rivolgersi al Pronto Soccorso.", "wide": true }
+  ],
+  "operation_note": "Queste informazioni hanno carattere generale. Gli aspetti specifici del percorso, compresi compenso, frequenza, consenso informato e limiti della riservatezza, vengono concordati e documentati prima dell'avvio.",
+  "cta": {
+    "title": "Vuoi chiedere un'informazione?",
+    "text": "Puoi presentare brevemente la tua richiesta e verificare disponibilità e modalità del primo incontro.",
+    "button_text": "Richiedi un primo contatto",
+    "button_href": "index.html#prenota"
+  }
+}

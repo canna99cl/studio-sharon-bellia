@@ -1,0 +1,86 @@
+{
+  "subhero": {
+    "eyebrow": "Ambito forense",
+    "title": "Psicologia forense e giuridica",
+    "lede": "Consulenze, valutazioni e incarichi psicologici in ambito civile, penale e famiglia e minori, con attenzione al quesito, al ruolo professionale e alla documentazione tecnica.",
+    "button_text": "Richiedi una valutazione preliminare del quesito",
+    "button_href": "index.html#prenota"
+  },
+  "destinatari": {
+    "eyebrow": "Destinatari",
+    "title": "A chi mi rivolgo",
+    "text": "Il ruolo e le modalità dell'intervento cambiano in base a chi conferisce l'incarico e al contesto in cui nasce il quesito.",
+    "items": [
+      { "title": "Privati e famiglie", "text": "Per comprendere la pertinenza di una richiesta psicologico-forense, di una consulenza di parte o di una valutazione extragiudiziale." },
+      { "title": "Avvocati", "text": "Per un confronto sul quesito, l'analisi della documentazione e il supporto tecnico-psicologico pertinente al procedimento." },
+      { "title": "Autorità giudiziaria", "text": "Per incarichi conferiti mediante nomina come CTU in ambito civile o come perito in ambito penale." }
+    ]
+  },
+  "ruoli": {
+    "eyebrow": "Ruoli e incarichi",
+    "title": "Ruoli diversi, confini chiari",
+    "text": "Ogni attività parte dalla definizione di chi conferisce l'incarico, del quesito e delle responsabilità connesse al ruolo.",
+    "items": [
+      { "title": "CTU in ambito civile", "text": "L'incarico deriva dalla nomina dell'autorità giudiziaria. Il consulente opera come ausiliario del giudice nel rispetto del quesito e delle disposizioni ricevute." },
+      { "title": "Perito in ambito penale", "text": "L'incarico deriva dalla nomina dell'autorità giudiziaria e riguarda accertamenti psicologici pertinenti al quesito formulato." },
+      { "title": "Consulenza Tecnica di Parte (CTP)", "text": "L'incarico è conferito dalla parte, normalmente in raccordo con il legale, per offrire supporto tecnico e partecipare alle operazioni peritali quando previsto." },
+      { "title": "Valutazioni e relazioni extragiudiziali", "text": "Attività fondate su un mandato definito e accettate soltanto quando il quesito, la documentazione e le modalità risultano pertinenti e metodologicamente appropriati." }
+    ]
+  },
+  "ambiti": {
+    "eyebrow": "Ambiti di intervento",
+    "title": "Civile, penale, famiglia e minori",
+    "text": "Ogni ambito richiede un quesito definito, strumenti pertinenti e una lettura tecnica circoscritta alle competenze psicologiche.",
+    "areas": [
+      { "title": "Ambito civile", "list": [ "Danno e conseguenze psicologiche pertinenti al quesito", "Funzionamento psicologico nei procedimenti civili", "Consulenza tecnica di parte e osservazioni nell'ambito di una CTU" ] },
+      { "title": "Ambito penale", "list": [ "Attività peritale su nomina dell'autorità giudiziaria", "Consulenza tecnica di parte e supporto tecnico al legale", "Valutazioni psicologiche pertinenti al quesito e analisi documentale" ] },
+      { "title": "Famiglia e minori", "list": [ "Capacità genitoriali, affidamento e dinamiche familiari", "Ascolto e tutela del minore nei limiti del ruolo e del mandato", "Consulenza tecnica nei procedimenti di separazione e affidamento" ] }
+    ]
+  },
+  "confini": {
+    "eyebrow": "Confini professionali",
+    "title": "Il ruolo viene prima degli strumenti",
+    "text": "Il lavoro forense risponde a un mandato e a un quesito: non coincide con un percorso clinico e richiede chiarezza del ruolo, metodo e limiti espliciti.",
+    "method": [
+      { "n": "01", "title": "Mandato e quesito", "desc": "Ogni attività è circoscritta alle domande tecniche e al ruolo conferito." },
+      { "n": "02", "title": "Distinzione dal percorso clinico", "desc": "La valutazione forense non coincide con un percorso clinico o terapeutico." },
+      { "n": "03", "title": "Strumenti pertinenti", "desc": "Colloqui, test e fonti documentali vengono scelti in relazione al quesito." },
+      { "n": "04", "title": "Conclusioni motivate", "desc": "Le conclusioni restano limitate ai dati disponibili e alle competenze psicologiche." },
+      { "n": "05", "title": "Riservatezza nel contesto giuridico", "desc": "Finalità, destinatari e limiti della riservatezza vengono chiariti prima dell'attività." },
+      { "n": "06", "title": "Verifica preliminare", "desc": "Incompatibilità, limiti metodologici o mancanza di pertinenza possono determinare la non accettazione dell'incarico." }
+    ]
+  },
+  "processo": {
+    "eyebrow": "In pratica",
+    "title": "Come si svolge un incarico",
+    "steps": [
+      { "num": "i", "title": "Analisi preliminare", "text": "Esame iniziale della richiesta per verificarne pertinenza, competenza, disponibilità e possibili incompatibilità." },
+      { "num": "ii", "title": "Mandato e quesito", "text": "Definizione del ruolo, di chi conferisce l'incarico e delle domande tecniche a cui il lavoro deve rispondere." },
+      { "num": "iii", "title": "Documentazione e attività valutative", "text": "Analisi degli atti, colloqui e impiego degli strumenti appropriati rispetto al quesito." },
+      { "num": "iv", "title": "Elaborazione tecnica", "text": "Integrazione critica dei dati raccolti secondo criteri metodologici espliciti e verificabili." },
+      { "num": "v", "title": "Relazione e restituzione", "text": "Esposizione motivata delle conclusioni e restituzione coerente con il mandato ricevuto." },
+      { "num": "vi", "title": "Attività processuali", "text": "Partecipazione alle operazioni peritali, alle udienze o ad altre attività quando prevista dall'incarico." }
+    ],
+    "note": "Per CTU e perito, modalità e tempi seguono la nomina e le disposizioni dell'autorità giudiziaria. Per CTP e attività extragiudiziali, il primo confronto serve anche a verificare se l'incarico possa essere accettato."
+  },
+  "faq": {
+    "eyebrow": "Domande frequenti",
+    "title": "Sull'ambito forense",
+    "items": [
+      { "q": "Qual è la differenza tra CTU, perito e CTP?", "a": "Il CTU è nominato dall'autorità giudiziaria in ambito civile; il perito riceve la nomina in ambito penale. Il CTP è scelto dalla parte e opera, normalmente in raccordo con il legale, nel rispetto del mandato e del quesito." },
+      { "q": "Un privato può richiedere direttamente una CTU o una perizia?", "a": "No. CTU e perito ricevono l'incarico dall'autorità giudiziaria. Un privato può invece richiedere un confronto preliminare per valutare una consulenza tecnica di parte o un'attività extragiudiziale pertinente." },
+      { "q": "Quando può essere utile una consulenza tecnica di parte?", "a": "Può essere utile quando nel procedimento sono rilevanti aspetti psicologici e la parte necessita di assistenza tecnica nell'analisi del quesito, della documentazione e delle operazioni peritali." },
+      { "q": "Quali documenti servono per il primo confronto?", "a": "Dipende dalla richiesta. Possono essere utili il provvedimento di nomina, il quesito, gli atti pertinenti e le precedenti relazioni. Nel primo contatto viene indicato cosa è necessario condividere e con quali modalità." },
+      { "q": "Una valutazione forense è un percorso clinico?", "a": "No. La valutazione forense risponde a un mandato e a un quesito specifico; non ha finalità terapeutiche e richiede una chiara distinzione dei ruoli." },
+      { "q": "È possibile richiedere una relazione psicologica?", "a": "La richiesta viene valutata preliminarmente. Una relazione può essere redatta soltanto quando finalità, mandato, dati disponibili e attività svolte consentono un elaborato metodologicamente e deontologicamente appropriato." },
+      { "q": "L'attività può svolgersi interamente online?", "a": "Non sempre. Alcuni confronti e alcune attività documentali possono avvenire a distanza, mentre colloqui, valutazioni o operazioni peritali possono richiedere la presenza. La modalità viene definita in base al quesito e al contesto." },
+      { "q": "Come vengono definiti tempi e compenso?", "a": "Dipendono dal mandato, dalla complessità del quesito, dalla documentazione, dalle attività necessarie e dalle eventuali scadenze processuali. Vengono chiariti prima dell'accettazione dell'incarico o secondo le disposizioni dell'autorità giudiziaria." }
+    ]
+  },
+  "cta": {
+    "title": "Vuoi sottoporre un quesito?",
+    "text": "Il primo contatto serve a comprendere la richiesta, verificare la pertinenza dell'intervento e chiarire ruolo, documentazione e modalità dell'eventuale incarico.",
+    "button_text": "Richiedi una valutazione preliminare del quesito",
+    "button_href": "index.html#prenota"
+  }
+}

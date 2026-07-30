@@ -4,15 +4,17 @@ title: "Risorse e materiali da scaricare · Dott.ssa Sharon Maria Bellia — Cal
 description: "Guide e materiali gratuiti da scaricare: cosa aspettarsi dal primo colloquio, cosa fa una CTP, modulistica e consenso informato. Studio della Dott.ssa Sharon Maria Bellia."
 permalink: "/risorse.html"
 ---
+{% import "macros.njk" as m %}
+{% set p = pages.risorse %}
 <main class="internal-page" id="main">
     <section class="subhero" aria-labelledby="page-title">
       <div class="container">
         <nav class="breadcrumb reveal" aria-label="Percorso di navigazione">
           <a href="index.html">Home</a><span>/</span>Risorse
         </nav>
-        <p class="eyebrow reveal">Risorse gratuite</p>
-        <h1 class="display subhero__title blur-in" id="page-title">Materiali utili da scaricare</h1>
-        <p class="subhero__lede reveal">Piccole guide pensate per orientarsi con più serenità. Lascia la tua email e ricevi il materiale nella tua casella.</p>
+        <p class="eyebrow reveal">{{ p.subhero.eyebrow }}</p>
+        <h1 class="display subhero__title blur-in" id="page-title">{{ p.subhero.title }}</h1>
+        <p class="subhero__lede reveal">{{ p.subhero.lede }}</p>
       </div>
     </section>
 
@@ -21,40 +23,26 @@ permalink: "/risorse.html"
     <section class="resources section--flush-top" aria-label="Materiali scaricabili">
       <div class="container">
         <div class="res-cards">
+          {% for card in p.cards %}
           <article class="res-card reveal">
-            <svg class="res-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg>
-            <h2 class="card__h">Cosa aspettarsi dal primo colloquio</h2>
-            <p>Una guida breve per arrivare al primo incontro senza ansia, sapendo come si svolge.</p>
-            <a class="res-card__link" href="index.html#contactForm">Scarica (via email)
+            {{ m.resIcon(card.icon) }}
+            <h2 class="card__h">{{ card.title }}</h2>
+            <p>{{ card.text }}</p>
+            <a class="res-card__link" href="{{ card.link_href }}">{{ card.link_text }}
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v14M6 11l6 6 6-6M5 21h14"/></svg>
             </a>
           </article>
-          <article class="res-card reveal">
-            <svg class="res-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6l9-4 9 4-9 4-9-4Z"/><path d="M3 6v6c0 3 4 5 9 5s9-2 9-5V6"/></svg>
-            <h2 class="card__h">Cosa fa una CTP</h2>
-            <p>Per avvocati e famiglie: ruolo, tempi e utilità della consulenza tecnica di parte.</p>
-            <a class="res-card__link" href="index.html#contactForm">Scarica (via email)
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v14M6 11l6 6 6-6M5 21h14"/></svg>
-            </a>
-          </article>
-          <article class="res-card reveal">
-            <svg class="res-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 2h6a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v0a2 2 0 0 1 2-2Z"/><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/></svg>
-            <h2 class="card__h">Modulistica e consenso informato</h2>
-            <p>I moduli utili prima di iniziare un percorso, con il consenso informato al trattamento.</p>
-            <a class="res-card__link" href="index.html#contactForm">Scarica (via email)
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v14M6 11l6 6 6-6M5 21h14"/></svg>
-            </a>
-          </article>
+          {% endfor %}
         </div>
-        <p class="section-note reveal">Altri materiali in arrivo: podcast, schede pratiche ed ebook.</p>
+        <p class="section-note reveal">{{ p.note }}</p>
       </div>
     </section>
 
     <section class="cta-band" aria-labelledby="cta-title">
       <div class="container">
-        <h2 id="cta-title" class="reveal">Hai bisogno di un confronto?</h2>
-        <p class="reveal">Scrivimi per un contatto preliminare informativo, in studio o online.</p>
-        <div class="reveal"><a class="btn btn--light" href="index.html#prenota">Richiedi informazioni</a></div>
+        <h2 id="cta-title" class="reveal">{{ p.cta.title }}</h2>
+        <p class="reveal">{{ p.cta.text }}</p>
+        <div class="reveal"><a class="btn btn--light" href="{{ p.cta.button_href }}">{{ p.cta.button_text }}</a></div>
       </div>
     </section>
   </main>

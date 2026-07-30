@@ -14,6 +14,11 @@ export default function (eleventyConfig) {
     new Date(d).toLocaleDateString("it-IT", { year: "numeric", month: "long", day: "numeric" })
   );
 
+  // Vero se l'URL è esterno (http/https): usato per aprire in nuova scheda
+  eleventyConfig.addFilter("ishttp", (url) =>
+    typeof url === "string" && /^https?:\/\//.test(url)
+  );
+
   // Data cascade: i file in src/_data sono disponibili in tutti i template.
   // Collezione "articoli" (Markdown in src/articoli), ordinati per data discendente.
   eleventyConfig.addCollection("articoli", (api) =>
