@@ -5,3 +5,9 @@ _site/
 # file di sviluppo/legacy non necessari al sito
 serve.cjs
 sharon-site.zip
+
+# tooling locale di Claude Code
+.claude/
+
+# file legacy (sorgente convertita in src/)
+sharon-site.zip
