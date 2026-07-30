@@ -1,0 +1,14 @@
+{
+  "name": "studio-sharon-bellia",
+  "version": "1.0.0",
+  "description": "Sito Dott.ssa Sharon Maria Bellia — Eleventy + Decap CMS",
+  "type": "module",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.0"
+  }
+}

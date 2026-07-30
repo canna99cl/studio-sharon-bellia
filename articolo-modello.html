@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pagina modello articolo · Dott.ssa Sharon Maria Bellia</title>
+  <meta name="description" content="Riferimento tecnico non pubblicato per il futuro template WordPress degli articoli." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#F5F2EB" media="(prefers-color-scheme: light)" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" /></noscript>
+</head>
+<body>
+  <a class="skip-link" href="#main">Vai al contenuto</a>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Dott.ssa Sharon Maria Bellia — Home">Dott.ssa Sharon Maria Bellia<small>Psicologa · Caltanissetta</small></a>
+      <nav class="nav" aria-label="Navigazione principale">
+        <ul class="nav__list" id="navList">
+          <li><a href="index.html#chi-sono">Chi sono</a></li>
+          <li><a href="index.html#ambiti">Ambiti</a></li>
+          <li><a href="percorso-modalita.html">Percorso</a></li>
+          <li><a href="competenze.html">Competenze</a></li>
+          <li><a href="articoli.html">Articoli</a></li>
+          <li><a href="index.html#prenota">Contatti</a></li>
+        </ul>
+        <a class="btn btn--amber" href="index.html#prenota">Contattami</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Apri il menu" aria-expanded="false" aria-controls="navList" type="button"><span></span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="internal-page" id="main">
+    <article class="article-template">
+      <header class="article-template__header">
+        <nav class="breadcrumb" aria-label="Percorso di navigazione"><a href="index.html">Home</a><span>/</span><a href="articoli.html">Articoli</a><span>/</span>Pagina modello</nav>
+        <p class="eyebrow">Categoria editoriale</p>
+        <h1 class="display">Titolo dell’articolo — pagina modello</h1>
+        <p class="article-template__summary">Sommario introduttivo: presenta con chiarezza la domanda affrontata e ciò che la persona troverà nell’articolo.</p>
+        <dl class="article-meta">
+          <div><dt>Autrice</dt><dd>Dott.ssa Sharon Maria Bellia</dd></div>
+          <div><dt>Pubblicazione</dt><dd>[giorno mese anno]</dd></div>
+          <div><dt>Ultima revisione</dt><dd>[giorno mese anno]</dd></div>
+          <div><dt>Tempo di lettura</dt><dd>[n] minuti</dd></div>
+        </dl>
+      </header>
+      <nav class="article-index" aria-label="Indice dell'articolo">
+        <h2>In questa pagina</h2>
+        <ol><li><a href="#introduzione">Introduzione</a></li><li><a href="#approfondimento">Approfondimento</a></li><li><a href="#fonti">Fonti</a></li></ol>
+      </nav>
+      <div class="article-copy">
+        <section id="introduzione"><h2>Introduzione</h2><p>[Testo introduttivo dell’articolo.]</p></section>
+        <section id="approfondimento"><h2>Approfondimento</h2><p>[Sviluppo del contenuto, con linguaggio accessibile e riferimenti verificabili.]</p></section>
+        <section class="article-sources" id="fonti"><h2>Fonti</h2><ol><li>[Riferimento bibliografico o fonte istituzionale.]</li></ol></section>
+      </div>
+      <aside class="article-disclaimer"><p>Questo contenuto ha finalità divulgative e non sostituisce una valutazione professionale.</p></aside>
+      <footer class="article-author"><p>Scritto e revisionato dalla Dott.ssa Sharon Maria Bellia.</p><a class="text-link" href="articoli.html">Torna agli articoli</a></footer>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div><div class="footer__brand">Dott.ssa Sharon Maria Bellia<small>Psicologa · area clinica e giuridico-forense</small></div><p>Studio di psicologia a Caltanissetta.</p></div>
+        <details class="footer__menu" open><summary class="footer__menu-title">Esplora</summary><div class="footer__menu-content"><ul><li><a href="index.html#chi-sono">Chi sono</a></li><li><a href="competenze.html">Competenze</a></li><li><a href="articoli.html">Articoli</a></li><li><a href="risorse.html">Risorse</a></li><li><a href="index.html#faq">FAQ</a></li></ul></div></details>
+        <details class="footer__menu" open><summary class="footer__menu-title">Ambiti</summary><div class="footer__menu-content"><ul><li><a href="psicologia-clinica.html">Psicologia clinica</a></li><li><a href="psicoterapia.html">Percorsi continuativi</a></li><li><a href="psicologia-forense.html">Psicologia forense</a></li></ul></div></details>
+      </div>
+      <div class="footer__bottom"><span>© <span id="year"></span> Dott.ssa Sharon Maria Bellia</span><span>Privacy · Cookie · Note legali</span></div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

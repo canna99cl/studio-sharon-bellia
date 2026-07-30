@@ -1,0 +1,59 @@
+---
+layout: base.njk
+title: "Articoli e riflessioni · Dott.ssa Sharon Maria Bellia"
+description: "Approfondimenti divulgativi su psicologia clinica, benessere, relazioni e ambito forense a cura della Dott.ssa Sharon Maria Bellia."
+permalink: "/articoli.html"
+---
+{% set hillSvg %}
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+  <rect width="600" height="400" fill="#F0E9DC"/>
+  <path d="M0 300 Q150 250 300 285 T600 270 V400 H0 Z" fill="#D8C7A8"/>
+  <path d="M0 330 Q170 290 340 320 T600 315 V400 H0 Z" fill="#B98C55"/>
+  <path d="M0 360 Q200 330 400 355 T600 350 V400 H0 Z" fill="#7B5E3C"/>
+  <circle cx="470" cy="120" r="46" fill="#E9CE9A"/>
+</svg>
+{% endset %}
+
+<main class="internal-page" id="main">
+  <section class="subhero" aria-labelledby="page-title">
+    <div class="container">
+      <nav class="breadcrumb reveal" aria-label="Percorso di navigazione">
+        <a href="index.html">Home</a><span>/</span>Articoli
+      </nav>
+      <p class="eyebrow reveal">Dallo studio</p>
+      <h1 class="display subhero__title blur-in" id="page-title">Articoli e riflessioni</h1>
+      <p class="subhero__lede reveal">Uno spazio divulgativo su psicologia, benessere, relazioni e ambito forense: pensieri e approfondimenti pubblicati man mano.</p>
+    </div>
+  </section>
+
+  <section class="blog section--flush-top" aria-label="Elenco articoli">
+    <div class="container">
+      {% if collections.articoli and collections.articoli.length %}
+      <div class="cards">
+        {% for art in collections.articoli %}
+        <a class="card reveal" href="{{ art.url }}">
+          <div class="card__img">
+            {% if art.data.image %}<img src="{{ art.data.image }}" alt="{{ art.data.title }}" loading="lazy">{% else %}{{ hillSvg | safe }}{% endif %}
+          </div>
+          <div class="card__body">
+            <span class="card__meta">{{ art.data.category if art.data.category else "Articolo" }}{% if art.data.readtime %} · {{ art.data.readtime }}{% endif %}</span>
+            <h2 class="card__h">{{ art.data.title }}</h2>
+            <p class="card__excerpt">{{ art.data.summary }}</p>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="section-note reveal" style="text-align:center">I primi articoli sono in arrivo. Torna a trovarmi presto.</p>
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="cta-band" aria-labelledby="cta-title">
+    <div class="container">
+      <h2 id="cta-title" class="reveal">Hai bisogno di un confronto?</h2>
+      <p class="reveal">Scrivimi per un contatto preliminare informativo, in studio o online.</p>
+      <div class="reveal"><a class="btn btn--light" href="index.html#prenota">Richiedi informazioni</a></div>
+    </div>
+  </section>
+</main>

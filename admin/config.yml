@@ -1,0 +1,122 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Per provare il pannello in locale con "npx decap-server" togli il commento:
+# local_backend: true
+
+media_folder: "src/assets/img"
+public_folder: "/assets/img"
+
+locale: "it"
+
+site_url: https://studiosharonbellia.example
+display_url: https://studiosharonbellia.example
+
+collections:
+  # ─────────────────────────────────────────────
+  # IMPOSTAZIONI DEL SITO (dati che compaiono ovunque)
+  # ─────────────────────────────────────────────
+  - name: "impostazioni"
+    label: "Impostazioni sito"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "generali"
+        label: "Dati dello studio"
+        file: "src/_data/site.json"
+        description: "Nome, contatti, indirizzo, orari e social: si aggiornano su tutte le pagine."
+        fields:
+          - { label: "Nome", name: "name", widget: "string" }
+          - { label: "Qualifica", name: "qualification", widget: "string" }
+          - { label: "Città", name: "city", widget: "string" }
+          - { label: "Tagline (sottotitolo del logo)", name: "tagline", widget: "string" }
+          - { label: "Descrizione per Google (SEO)", name: "description", widget: "text" }
+          - { label: "Dominio del sito", name: "domain", widget: "string", hint: "Es. studiosharonbellia.it" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Telefono (come mostrarlo)", name: "phone_display", widget: "string" }
+          - { label: "Numero WhatsApp", name: "whatsapp_number", widget: "string", hint: "Solo cifre, con prefisso: 393298335497" }
+          - { label: "Messaggio WhatsApp precompilato", name: "whatsapp_message", widget: "string" }
+          - { label: "Via e numero civico", name: "address_street", widget: "string" }
+          - { label: "CAP", name: "address_postal", widget: "string" }
+          - { label: "Città (indirizzo)", name: "address_city", widget: "string" }
+          - { label: "Provincia", name: "address_province", widget: "string" }
+          - { label: "Link a Google Maps", name: "maps_url", widget: "string" }
+          - { label: "Indirizzo per la mappa incorporata", name: "maps_embed_query", widget: "string", hint: "Es. Piazza+Europa+6,+Caltanissetta" }
+          - label: "Orari di apertura"
+            name: "hours"
+            widget: "list"
+            label_singular: "Riga orario"
+            summary: "{{fields.label}} — {{fields.value}}"
+            fields:
+              - { label: "Giorno", name: "label", widget: "string" }
+              - { label: "Orario", name: "value", widget: "string" }
+          - label: "Social"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "Facebook (URL)", name: "facebook", widget: "string", required: false }
+              - { label: "Instagram (URL)", name: "instagram", widget: "string", required: false }
+          - { label: "Albo professionale", name: "albo", widget: "string" }
+          - { label: "Partita IVA", name: "piva", widget: "string" }
+
+  # ─────────────────────────────────────────────
+  # TESTI DELLA HOME (titoli e sezioni principali)
+  # ─────────────────────────────────────────────
+  - name: "home"
+    label: "Testi della Home"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "contenuti"
+        label: "Sezioni della Home"
+        file: "src/_data/home.json"
+        description: "Titoli e testi delle sezioni principali della homepage."
+        fields:
+          - label: "Sezione iniziale (hero)"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Occhiello", name: "eyebrow", widget: "string" }
+              - { label: "Titolo principale", name: "title", widget: "text" }
+              - { label: "Sottotitolo", name: "subtitle", widget: "text" }
+          - label: "Sezione presentazione"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Occhiello", name: "eyebrow", widget: "string" }
+              - { label: "Titolo", name: "title", widget: "text" }
+              - { label: "Testo", name: "text", widget: "text" }
+
+  # ─────────────────────────────────────────────
+  # ARTICOLI (blog)
+  # ─────────────────────────────────────────────
+  - name: "articoli"
+    label: "Articoli"
+    label_singular: "Articolo"
+    folder: "src/articoli"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    summary: "{{title}}  ·  {{date | date('DD/MM/YYYY')}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "Titolo", name: "title", widget: "string" }
+      - { label: "Sommario", name: "summary", widget: "text", hint: "Frase breve mostrata nell'anteprima." }
+      - label: "Categoria"
+        name: "category"
+        widget: "select"
+        options:
+          - "Psicologia clinica"
+          - "Psicoterapia"
+          - "Psicologia forense"
+          - "Benessere"
+          - "Relazioni"
+          - "Genitorialità"
+      - { label: "Tempo di lettura", name: "readtime", widget: "string", required: false, hint: "Es. 4 min" }
+      - { label: "Data", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+      - { label: "Immagine di copertina (opzionale)", name: "image", widget: "image", required: false }
+      - { label: "Contenuto", name: "body", widget: "markdown" }

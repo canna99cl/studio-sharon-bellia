@@ -1,0 +1,13 @@
+# Netlify: build del sito Eleventy + supporto Decap CMS (Identity/Git Gateway)
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Reindirizza /admin a /admin/ (pannello Decap)
+[[redirects]]
+  from = "/admin"
+  to = "/admin/"
+  status = 301

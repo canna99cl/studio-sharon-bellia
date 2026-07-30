@@ -1,0 +1,29 @@
+{
+  "name": "Dott.ssa Sharon Maria Bellia",
+  "qualification": "Psicologa",
+  "city": "Caltanissetta",
+  "tagline": "Psicologa · Caltanissetta",
+  "description": "Studio di psicologia a Caltanissetta: attività in area clinica e giuridico-forense, con percorsi costruiti con chiarezza e rigore.",
+  "domain": "studiosharonbellia.example",
+  "email": "studio@studiosharonbellia.example",
+  "phone_display": "+39 329 833 5497",
+  "whatsapp_number": "393298335497",
+  "whatsapp_message": "Salve, vorrei informazioni per un primo colloquio.",
+  "address_street": "Piazza Europa 6",
+  "address_postal": "93100",
+  "address_city": "Caltanissetta",
+  "address_province": "CL",
+  "maps_url": "https://maps.app.goo.gl/3FndVFn18fYsr5CcA",
+  "maps_embed_query": "Piazza+Europa+6,+Caltanissetta",
+  "hours": [
+    { "label": "Lunedì – Venerdì", "value": "9:00–13:00 · 16:00–19:00" },
+    { "label": "Sabato", "value": "Su appuntamento" },
+    { "label": "Domenica", "value": "Chiuso" }
+  ],
+  "social": {
+    "facebook": "https://www.facebook.com/dott.ssasharonbellia/",
+    "instagram": "https://www.instagram.com/dott.ssa_sharon/"
+  },
+  "albo": "Ordine degli Psicologi della Regione Siciliana — Sezione A, n. 12014",
+  "piva": "00000000000"
+}

@@ -1,0 +1,31 @@
+---
+layout: base.njk
+---
+<main class="internal-page" id="main">
+  <article class="article-template">
+    <header class="article-template__header">
+      <nav class="breadcrumb reveal" aria-label="Percorso di navigazione">
+        <a href="index.html">Home</a><span>/</span><a href="articoli.html">Articoli</a><span>/</span>{{ title }}
+      </nav>
+      <p class="eyebrow reveal">{{ category if category else "Articolo" }}</p>
+      <h1 class="display blur-in">{{ title }}</h1>
+      {% if summary %}<p class="article-template__summary reveal">{{ summary }}</p>{% endif %}
+      <dl class="article-meta reveal">
+        <div><dt>Pubblicato</dt><dd>{{ page.date | dateIt }}</dd></div>
+        {% if readtime %}<div><dt>Lettura</dt><dd>{{ readtime }}</dd></div>{% endif %}
+      </dl>
+    </header>
+
+    <div class="article-copy prose">
+      {{ content | safe }}
+    </div>
+
+    <aside class="article-disclaimer">
+      <p>Questo contenuto ha finalità divulgative e non sostituisce una valutazione o una consulenza professionale.</p>
+    </aside>
+    <footer class="article-author">
+      <p>Scritto e revisionato dalla {{ site.name }}.</p>
+      <a class="text-link" href="articoli.html">← Torna agli articoli</a>
+    </footer>
+  </article>
+</main>
