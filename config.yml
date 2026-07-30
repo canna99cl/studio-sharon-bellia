@@ -62,10 +62,10 @@ collections:
           - { label: "Partita IVA", name: "piva", widget: "string" }
 
   # ─────────────────────────────────────────────
-  # TESTI DELLA HOME (tutte le sezioni)
+  # TESTI DELLA HOME (titoli e sezioni principali)
   # ─────────────────────────────────────────────
   - name: "home"
-    label: "Home"
+    label: "Testi della Home"
     delete: false
     editor:
       preview: false
@@ -73,120 +73,22 @@ collections:
       - name: "contenuti"
         label: "Sezioni della Home"
         file: "src/_data/home.json"
-        description: "Tutti i testi, gli elenchi e le FAQ della homepage."
+        description: "Titoli e testi delle sezioni principali della homepage."
         fields:
-          - label: "1 · Sezione iniziale (hero)"
+          - label: "Sezione iniziale (hero)"
             name: "hero"
             widget: "object"
-            collapsed: true
             fields:
               - { label: "Occhiello", name: "eyebrow", widget: "string" }
-              - { label: "Titolo principale", name: "title", widget: "text", hint: "Per il corsivo usa <em>parola</em>" }
+              - { label: "Titolo principale", name: "title", widget: "text" }
               - { label: "Sottotitolo", name: "subtitle", widget: "text" }
-              - { label: "Bottone principale · testo", name: "cta_primary_label", widget: "string" }
-              - { label: "Bottone principale · link", name: "cta_primary_href", widget: "string" }
-              - { label: "Bottone secondario · testo", name: "cta_secondary_label", widget: "string" }
-              - { label: "Bottone secondario · link", name: "cta_secondary_href", widget: "string" }
-              - { label: "Riga disponibilità", name: "availability", widget: "string" }
-          - label: "2 · Frase narrativa"
-            name: "intro_narrativa"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Testo", name: "text", widget: "text", hint: "Per il corsivo usa <em>parola</em>" }
-              - { label: "Firma", name: "sign", widget: "string" }
-          - label: "3 · Chi sono (titolo)"
+          - label: "Sezione presentazione"
             name: "intro"
             widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Occhiello", name: "eyebrow", widget: "string" }
-              - { label: "Titolo", name: "title", widget: "text" }
-              - { label: "Testo introduttivo", name: "text", widget: "text" }
-          - label: "3 · Chi sono (dettagli)"
-            name: "about"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Didascalia ritratto", name: "portrait_caption", widget: "string" }
-              - label: "Paragrafi"
-                name: "paragraphs"
-                widget: "list"
-                field: { label: "Paragrafo", name: "testo", widget: "text" }
-              - label: "Titoli / formazione"
-                name: "credentials"
-                widget: "list"
-                label_singular: "Voce"
-                summary: "{{fields.label}} — {{fields.text}}"
-                fields:
-                  - { label: "Etichetta", name: "label", widget: "string" }
-                  - { label: "Testo", name: "text", widget: "string" }
-                  - { label: "Fonte (testo del link)", name: "source_text", widget: "string" }
-                  - { label: "Fonte (URL)", name: "source_url", widget: "string" }
-                  - { label: "Testo aggiuntivo", name: "source_suffix", widget: "string", required: false }
-          - label: "4 · Ambiti di intervento"
-            name: "ambiti"
-            widget: "object"
-            collapsed: true
             fields:
               - { label: "Occhiello", name: "eyebrow", widget: "string" }
               - { label: "Titolo", name: "title", widget: "text" }
               - { label: "Testo", name: "text", widget: "text" }
-              - label: "I tre ambiti"
-                name: "items"
-                widget: "list"
-                label_singular: "Ambito"
-                summary: "{{fields.title}}"
-                hint: "Consigliato mantenere 3 blocchi (grafica dedicata a ciascuno)."
-                fields:
-                  - { label: "Occhiello", name: "eyebrow", widget: "string" }
-                  - { label: "Titolo", name: "title", widget: "text" }
-                  - { label: "Testo", name: "text", widget: "text" }
-                  - { label: "Link · testo", name: "link_text", widget: "string" }
-                  - { label: "Link · pagina", name: "link_href", widget: "string" }
-                  - label: "Elenco puntato"
-                    name: "list"
-                    widget: "list"
-                    field: { label: "Voce", name: "voce", widget: "string" }
-          - label: "5 · Citazione"
-            name: "quote"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Testo", name: "text", widget: "text" }
-              - { label: "Firma", name: "cite", widget: "string" }
-          - label: "6 · Domande frequenti (FAQ)"
-            name: "faq"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Occhiello", name: "eyebrow", widget: "string" }
-              - { label: "Titolo", name: "title", widget: "text" }
-              - label: "Domande"
-                name: "items"
-                widget: "list"
-                label_singular: "Domanda"
-                summary: "{{fields.q}}"
-                fields:
-                  - { label: "Domanda", name: "q", widget: "string" }
-                  - { label: "Risposta", name: "a", widget: "text", hint: "Puoi inserire link con <a href=\"...\">testo</a>" }
-          - label: "7 · Richiedi contatto"
-            name: "booking"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Etichetta", name: "badge", widget: "string" }
-              - { label: "Titolo", name: "title", widget: "text" }
-              - { label: "Testo", name: "text", widget: "text" }
-          - label: "7 · Recapiti (colonna contatti)"
-            name: "contatti"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Occhiello", name: "eyebrow", widget: "string" }
-              - { label: "Nota", name: "note", widget: "text" }
-              - { label: "Riga Online", name: "online", widget: "string" }
-              - { label: "Testo consenso privacy", name: "privacy_label", widget: "text", hint: "Puoi inserire link con <a href=\"...\">testo</a>" }
 
   # ─────────────────────────────────────────────
   # ARTICOLI (blog)
