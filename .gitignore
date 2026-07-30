@@ -11,3 +11,6 @@ sharon-site.zip
 
 # file legacy (sorgente convertita in src/)
 sharon-site.zip
+
+# Local Netlify folder
+.netlify

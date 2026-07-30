@@ -10,8 +10,8 @@ public_folder: "/assets/img"
 
 locale: "it"
 
-site_url: https://studiosharonbellia.example
-display_url: https://studiosharonbellia.example
+site_url: https://studio-sharon-bellia.netlify.app
+display_url: https://studio-sharon-bellia.netlify.app
 
 collections:
   # ─────────────────────────────────────────────
